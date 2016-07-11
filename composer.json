@@ -1,0 +1,38 @@
+{
+    "name": "symfony-cmf/content-type-bundle",
+    "description": "Bundle integrating the ContentType component",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Symfony CMF Community",
+            "homepage": "https://github.com/symfony-cmf/BlockBundle/contributors"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "symfony/framework-bundle": "^2.8",
+        "symfony-cmf/content-type": "dev-master"
+    },
+    "require-dev": {
+        "symfony/console": "^2.8",
+        "symfony/yaml": "^2.8",
+        "symfony/process": "^2.8",
+        "phpunit/phpunit": "@stable"
+    },
+    "autoload": {
+        "psr-4": {
+            "Symfony\\Cmf\\Bundle\\ContentType\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Symfony\\Cmf\\Bundle\\ContentType\\Tests\\": "tests/",
+            "Symfony\\Cmf\\Bundle\\ContentType\\Example\\": "example/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
