@@ -25,5 +25,8 @@ class CmfContentTypeExtension extends Extension
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('metadata.xml');
         $loader->load('registry.xml');
+        $loader->load('fields.xml');
+        $loader->load('form.xml');
+        $loader->load('views.xml');
     }
 }
