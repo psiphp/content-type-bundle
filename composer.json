@@ -1,0 +1,40 @@
+{
+    "name": "symfony-cmf/content-type-bundle",
+    "description": "Bundle for Content Type Component",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Symfony CMF Community"
+        }
+    ],
+    "require": {
+        "symfony/framework-bundle": "^2.8",
+        "symfony-cmf/content-type": "dev-master"
+    },
+    "require-dev": {
+        "doctrine/doctrine-bundle": "^1.6",
+        "doctrine/phpcr-odm": "~1.3",
+        "doctrine/phpcr-bundle": "~1.3",
+        "jackalope/jackalope-doctrine-dbal": "~1.2",
+        "symfony/console": "^2.8",
+        "symfony/yaml": "^2.8",
+        "symfony/process": "^2.8",
+        "phpunit/phpunit": "@stable"
+    },
+    "autoload": {
+        "psr-4": {
+            "Symfony\\Cmf\\Component\\ContentType\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Symfony\\Cmf\\Component\\ContentType\\Tests\\": "tests/",
+            "Symfony\\Cmf\\Component\\ContentType\\Example\\": "example/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
