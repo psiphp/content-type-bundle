@@ -1,6 +1,6 @@
 {
     "name": "symfony-cmf/content-type-bundle",
-    "description": "Bundle for Content Type Component",
+    "description": "Bundle for Content Type Bundle",
     "license": "MIT",
     "authors": [
         {
@@ -23,13 +23,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Symfony\\Cmf\\Component\\ContentType\\": "src/"
+            "Symfony\\Cmf\\Bundle\\ContentTypeBundle\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Symfony\\Cmf\\Component\\ContentType\\Tests\\": "tests/",
-            "Symfony\\Cmf\\Component\\ContentType\\Example\\": "example/"
+            "Symfony\\Cmf\\Bundle\\ContentTypeBundle\\Tests\\": "tests/",
+            "Symfony\\Cmf\\Bundle\\ContentTypeBundle\\Example\\": "example/"
         }
     },
     "extra": {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Symfony\Cmf\Component\ContentType\Tests\Functional;
+namespace Symfony\Cmf\Bundle\ContentTypeBundle\Tests\Functional;
 
 class ServiceTest extends BaseTestCase
 {

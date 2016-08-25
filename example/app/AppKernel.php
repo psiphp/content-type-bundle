@@ -1,6 +1,6 @@
 <?php
 
-namespace Symfony\Cmf\Component\ContentType\Example\app;
+namespace Symfony\Cmf\Bundle\ContentTypeBundle\Example\app;
 
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
@@ -11,7 +11,7 @@ class AppKernel extends Kernel
     {
         $bundles = [
             new \Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
-            new \Symfony\Cmf\Component\ContentType\ContentTypeBundle(),
+            new \Symfony\Cmf\Bundle\ContentTypeBundle\ContentTypeBundle(),
             new \Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new \Doctrine\Bundle\PHPCRBundle\DoctrinePHPCRBundle(),
         ];

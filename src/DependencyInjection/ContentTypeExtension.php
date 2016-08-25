@@ -1,6 +1,6 @@
 <?php
 
-namespace Symfony\Cmf\Component\ContentType\DependencyInjection;
+namespace Symfony\Cmf\Bundle\ContentTypeBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -29,6 +29,9 @@ class ContentTypeExtension extends Extension
         $loader->load('metadata.xml');
         $loader->load('form.xml');
         $loader->load('services.xml');
+        $loader->load('fields.xml');
+        $loader->load('mappings.xml');
+        $loader->load('views.xml');
         $loader->load('doctrine/phpcr-odm.xml');
     }
 }

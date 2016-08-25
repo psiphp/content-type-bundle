@@ -1,8 +1,9 @@
 <?php
 
-namespace Symfony\Cmf\Component\ContentType\Tests\Functional;
+namespace Symfony\Cmf\Bundle\ContentTypeBundle\Tests\Functional;
 
-use Symfony\Cmf\Component\ContentType\Example\app\AppKernel;
+use Symfony\Cmf\Bundle\ContentTypeBundle\Example\app\AppKernel;
+
 
 class BaseTestCase extends \PHPUnit_Framework_TestCase
 {
