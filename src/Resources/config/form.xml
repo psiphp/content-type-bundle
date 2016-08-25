@@ -6,7 +6,7 @@
 
     <services>
 
-        <service id="cmf_content_type.form.extension.field" class="Metadata\MetadataFactory">
+        <service id="cmf_content_type.form.extension.field" class="Symfony\Cmf\Component\ContentType\Form\Extension\FieldExtension">
 
             <argument type="service" id="cmf_content_type.metadata.factory" />
             <argument type="service" id="cmf_content_type.registry.field" />

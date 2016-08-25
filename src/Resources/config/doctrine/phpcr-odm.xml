@@ -37,8 +37,6 @@
             <argument type="service" id="cmf_content_type.storage.phpcr.property_encoder" />
         </service>
 
-
-
     </services>
 
 </container>
