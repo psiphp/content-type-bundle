@@ -7,6 +7,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Cmf\Bundle\ContentTypeBundle\DependencyInjection\Compiler\MappingPass;
 use Symfony\Cmf\Bundle\ContentTypeBundle\DependencyInjection\Compiler\ViewPass;
 use Symfony\Cmf\Bundle\ContentTypeBundle\DependencyInjection\Compiler\FieldPass;
+use Symfony\Cmf\Bundle\ContentTypeBundle\DependencyInjection\Compiler\FormExtensionPass;
 
 class ContentTypeBundle extends Bundle
 {
@@ -15,5 +16,6 @@ class ContentTypeBundle extends Bundle
         $container->addCompilerPass(new FieldPass());
         $container->addCompilerPass(new ViewPass());
         $container->addCompilerPass(new MappingPass());
+        $container->addCompilerPass(new FormExtensionPass());
     }
 }
