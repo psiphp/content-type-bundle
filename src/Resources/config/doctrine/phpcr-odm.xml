@@ -6,16 +6,16 @@
 
     <services>
 
-        <service id="psi_content_type.storage.phpcr.property_encoder" class="Psi\Component\ContentType\Storage\Doctrine\PhpcrOdm\PropertyEncoder">
-            <argument>%psi_content_type.phpcr_namespace_prefix%</argument>
-            <argument>%psi_content_type.phpcr_namespace_url%</argument>
+        <service id="psi_content_type.storage.phpcr.property_encoder" class="Psi\Component\ContentType\Storage\Doctrine\PhpcrOdm\PropertyEncoder" public="false">
+            <argument>%psi_content_type.storage.doctrine_phpcr_odm.namespace_prefix%</argument>
+            <argument>%psi_content_type.storage.doctrine_phpcr_odm.namespace_uri%</argument>
         </service>
 
-        <service id="psi_content_type.storage.doctrine.phpcr_odm.field_mapper" class="Psi\Component\ContentType\Storage\Doctrine\PhpcrOdm\FieldMapper">
+        <service id="psi_content_type.storage.doctrine.phpcr_odm.field_mapper" class="Psi\Component\ContentType\Storage\Doctrine\PhpcrOdm\FieldMapper" public="false">
             <argument type="service" id="psi_content_type.storage.phpcr.property_encoder" />
         </service>
 
-        <service id="psi_content_type.doctrine.phpcr_odm.field_driver" class="Psi\Component\ContentType\Storage\Doctrine\PhpcrOdm\ContentTypeDriver">
+        <service id="psi_content_type.doctrine.phpcr_odm.field_driver" class="Psi\Component\ContentType\Storage\Doctrine\PhpcrOdm\ContentTypeDriver" public="false">
             <argument type="service" id="psi_content_type.registry.field" />
             <argument type="service" id="psi_content_type.registry.mapping" />
             <argument type="service" id="psi_content_type.mapping_resolver" />
@@ -35,10 +35,10 @@
             <argument type="service" id="psi_content_type.metadata.factory" />
             <argument type="service" id="psi_content_type.registry.field" />
             <argument type="service" id="psi_content_type.storage.phpcr.property_encoder" />
+
+            <tag name="doctrine_phpcr.event_subscriber" />
         </service>
 
     </services>
 
 </container>
-
-

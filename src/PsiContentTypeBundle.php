@@ -15,7 +15,7 @@ class PsiContentTypeBundle extends Bundle
     public function build(ContainerBuilder $container)
     {
         $extension = $container->getExtension('psi_content_type');
-        $extension->addStorageLoader('doctrine_phpcr_odm', new PhpcrOdmLoader());
+        $extension->addStorageLoader('doctrine_phpcr_odm', new PhpcrOdmLoader($container));
 
         $container->addCompilerPass(new FieldPass());
         $container->addCompilerPass(new ViewPass());

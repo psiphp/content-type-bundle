@@ -25,11 +25,8 @@ doctrine_phpcr:
         username: admin
         password: admin
 
-    odm:
-        auto_mapping: true
-
 psi_content_type:
-    storage_drivers: 
+    enabled_storage: 
         - doctrine_phpcr_odm
 
 services:
