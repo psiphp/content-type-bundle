@@ -1,8 +1,8 @@
 <?php
 
-namespace Symfony\Cmf\Bundle\ContentTypeBundle\Tests\Functional;
+namespace Psi\Bundle\ContentType\Tests\Functional;
 
-use Symfony\Cmf\Bundle\ContentTypeBundle\Tests\Functional\BaseTestCase;
+use Psi\Bundle\ContentType\Tests\Functional\BaseTestCase;
 use Symfony\Cmf\Component\ContentType\Field\TextField;
 use Symfony\Cmf\Component\ContentType\View\ScalarView;
 

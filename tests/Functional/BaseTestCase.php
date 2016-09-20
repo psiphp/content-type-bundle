@@ -1,8 +1,8 @@
 <?php
 
-namespace Symfony\Cmf\Bundle\ContentTypeBundle\Tests\Functional;
+namespace Psi\Bundle\ContentType\Tests\Functional;
 
-use Symfony\Cmf\Bundle\ContentTypeBundle\Example\app\AppKernel;
+use Psi\Bundle\ContentType\Example\app\AppKernel;
 
 
 class BaseTestCase extends \PHPUnit_Framework_TestCase

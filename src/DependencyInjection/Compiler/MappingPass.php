@@ -1,6 +1,6 @@
 <?php
 
-namespace Symfony\Cmf\Bundle\ContentTypeBundle\DependencyInjection\Compiler;
+namespace Psi\Bundle\ContentType\DependencyInjection\Compiler;
 
 class MappingPass extends AbstractRegistryPass
 {

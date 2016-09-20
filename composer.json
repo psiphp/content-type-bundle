@@ -23,13 +23,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Symfony\\Cmf\\Bundle\\ContentTypeBundle\\": "src/"
+            "Psi\\Bundle\\ContentType\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Symfony\\Cmf\\Bundle\\ContentTypeBundle\\Tests\\": "tests/",
-            "Symfony\\Cmf\\Bundle\\ContentTypeBundle\\Example\\": "example/"
+            "Psi\\Bundle\\ContentType\\Tests\\": "tests/",
+            "Psi\\Bundle\\ContentType\\Example\\": "example/"
         }
     },
     "extra": {
