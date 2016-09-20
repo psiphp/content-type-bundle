@@ -11,8 +11,8 @@
 
 namespace Psi\Bundle\ContentType\DependencyInjection\Compiler;
 
-use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
 use Symfony\Component\DependencyInjection\Reference;
 
@@ -26,8 +26,7 @@ abstract class AbstractRegistryPass implements CompilerPassInterface
         $registryId,
         $serviceTag,
         $registerByAlias = true
-    )
-    {
+    ) {
         $this->registryId = $registryId;
         $this->serviceTag = $serviceTag;
         $this->registerByAlias = $registerByAlias;
@@ -58,8 +57,7 @@ abstract class AbstractRegistryPass implements CompilerPassInterface
                 $alias = $container->getDefinition($serviceId)->getClass();
             }
 
-            $registryDef->addMethodCall('register', [ $alias, new Reference($serviceId) ]);
+            $registryDef->addMethodCall('register', [$alias, new Reference($serviceId)]);
         }
     }
 }
-

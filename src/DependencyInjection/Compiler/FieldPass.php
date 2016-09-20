@@ -7,8 +7,8 @@ class FieldPass extends AbstractRegistryPass
     public function __construct()
     {
         parent::__construct(
-            'cmf_content_type.registry.field',
-            'cmf_content_type.field'
+            'psi_content_type.registry.field',
+            'psi_content_type.field'
         );
     }
 }

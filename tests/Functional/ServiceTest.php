@@ -9,7 +9,7 @@ class ServiceTest extends BaseTestCase
         $container = $this->getContainer();
 
         foreach ($container->getServiceIds() as $serviceId) {
-            if (0 === strpos($serviceId, 'cmf_content_type')) {
+            if (0 === strpos($serviceId, 'psi_content_type')) {
                 $container->get($serviceId);
             }
         }

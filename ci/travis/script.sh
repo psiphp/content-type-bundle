@@ -1,1 +1,3 @@
- phpunit
+phpunit
+php example/bin/console
+

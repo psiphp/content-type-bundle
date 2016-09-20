@@ -4,7 +4,6 @@ namespace Psi\Bundle\ContentType\Tests\Functional;
 
 use Psi\Bundle\ContentType\Example\app\AppKernel;
 
-
 class BaseTestCase extends \PHPUnit_Framework_TestCase
 {
     private $container;

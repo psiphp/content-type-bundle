@@ -2,8 +2,8 @@
 
 namespace Psi\Bundle\ContentType\DependencyInjection\Compiler;
 
-use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 class FormExtensionPass implements CompilerPassInterface
 {
@@ -15,6 +15,6 @@ class FormExtensionPass implements CompilerPassInterface
 
         $registryDef = $container->getDefinition('form.registry');
         $extensions = $registryDef->getArgument(0);
-        $extensions[] = new Reference('cmf_content_type.form.extension.field');
+        $extensions[] = new Reference('psi_content_type.form.extension.field');
     }
 }
