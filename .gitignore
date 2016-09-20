@@ -2,4 +2,3 @@ vendor/
 composer.lock
 phpunit.xml
 composer.phar
-/example/var/*
