@@ -2,13 +2,13 @@
 
 namespace Psi\Bundle\ContentType;
 
-use Symfony\Component\HttpKernel\Bundle\Bundle;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Psi\Bundle\ContentType\DependencyInjection\Compiler\MappingPass;
-use Psi\Bundle\ContentType\DependencyInjection\Compiler\ViewPass;
 use Psi\Bundle\ContentType\DependencyInjection\Compiler\FieldPass;
 use Psi\Bundle\ContentType\DependencyInjection\Compiler\FormExtensionPass;
+use Psi\Bundle\ContentType\DependencyInjection\Compiler\MappingPass;
+use Psi\Bundle\ContentType\DependencyInjection\Compiler\ViewPass;
 use Psi\Bundle\ContentType\DependencyInjection\Storage\PhpcrOdmLoader;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class PsiContentTypeBundle extends Bundle
 {
