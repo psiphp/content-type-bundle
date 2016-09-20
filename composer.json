@@ -1,5 +1,5 @@
 {
-    "name": "symfony-cmf/content-type-bundle",
+    "name": "psiphp/content-type-bundle",
     "description": "Bundle for Content Type Bundle",
     "license": "MIT",
     "authors": [
@@ -9,7 +9,7 @@
     ],
     "require": {
         "symfony/framework-bundle": "^3.0",
-        "symfony-cmf/content-type": "dev-master"
+        "psiphp/content-type": "dev-master"
     },
     "require-dev": {
         "doctrine/doctrine-bundle": "^1.6",
