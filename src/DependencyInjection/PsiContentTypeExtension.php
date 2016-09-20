@@ -39,7 +39,7 @@ class PsiContentTypeExtension extends Extension
 
         if (!$storages) {
             throw new \InvalidArgumentException(sprintf(
-                'No storage drivers specified for content-type component. Please specify at least one of: "%s"',
+                'No storage drivers specified for content-type component. Specify at least one of: "%s"',
                 implode('", "', array_keys($this->storageLoaders))
             ));
         }
