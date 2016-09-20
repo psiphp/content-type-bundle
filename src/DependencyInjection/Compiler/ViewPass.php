@@ -7,8 +7,8 @@ class ViewPass extends AbstractRegistryPass
     public function __construct()
     {
         parent::__construct(
-            'cmf_content_type.registry.view',
-            'cmf_content_type.view',
+            'psi_content_type.registry.view',
+            'psi_content_type.view',
             false
         );
     }

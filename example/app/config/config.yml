@@ -23,3 +23,7 @@ doctrine_phpcr:
 
     odm:
         auto_mapping: true
+
+psi_content_type:
+    storage_drivers: 
+        - doctrine_phpcr_odm

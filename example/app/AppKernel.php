@@ -11,7 +11,7 @@ class AppKernel extends Kernel
     {
         $bundles = [
             new \Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
-            new \Psi\Bundle\ContentType\ContentTypeBundle(),
+            new \Psi\Bundle\ContentType\PsiContentTypeBundle(),
             new \Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new \Doctrine\Bundle\PHPCRBundle\DoctrinePHPCRBundle(),
         ];

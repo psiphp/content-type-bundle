@@ -11,7 +11,7 @@ class ScalarMappingTest extends BaseTestCase
 {
     public function testScalarMapping()
     {
-        $registry  = $this->getContainer()->get('cmf_content_type.registry.mapping');
+        $registry  = $this->getContainer()->get('psi_content_type.registry.mapping');
         $mapping  = $registry->get('string');
         $this->assertInstanceOf(StringMapping::class, $mapping);
     }

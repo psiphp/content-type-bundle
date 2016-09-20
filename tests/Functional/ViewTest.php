@@ -10,7 +10,7 @@ class ScalarViewTest extends BaseTestCase
 {
     public function testScalarView()
     {
-        $registry  = $this->getContainer()->get('cmf_content_type.registry.view');
+        $registry  = $this->getContainer()->get('psi_content_type.registry.view');
         $view  = $registry->get(ScalarView::class);
         $this->assertInstanceOf(ScalarView::class, $view);
     }
