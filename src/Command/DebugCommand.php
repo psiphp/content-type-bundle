@@ -14,7 +14,7 @@ use Symfony\Component\Console\Helper\Table;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\OptionsResolver\OptionsResolver;
+use Psi\Component\ContentType\OptionsResolver\FieldOptionsResolver;
 
 class DebugCommand extends Command
 {
@@ -106,7 +106,7 @@ EOT
         $output->write(PHP_EOL);
 
         $output->writeln('<comment>// Default options</comment>');
-        $options = new OptionsResolver();
+        $options = new FieldOptionsResolver();
         $field->configureOptions($options);
         $options = $options->resolve([]);
         $this->showOptions($output, $options);

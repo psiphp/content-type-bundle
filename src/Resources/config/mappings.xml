@@ -14,10 +14,6 @@
             <tag name="psi_content_type.mapping" alias="datetime" />
         </service>
 
-
     </services>
 
 </container>
-
-
-
