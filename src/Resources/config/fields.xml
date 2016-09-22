@@ -10,7 +10,7 @@
             <tag name="psi_content_type.field" alias="text" />
         </service>
 
-        <service id="psi_content_type.field.text" class="Psi\Component\ContentType\Field\DateTimeField">
+        <service id="psi_content_type.field.datetime" class="Psi\Component\ContentType\Field\DateTimeField">
             <tag name="psi_content_type.field" alias="datetime" />
         </service>
 
