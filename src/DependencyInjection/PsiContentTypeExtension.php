@@ -34,6 +34,7 @@ class PsiContentTypeExtension extends Extension
         $loader->load('fields.xml');
         $loader->load('mappings.xml');
         $loader->load('views.xml');
+        $loader->load('console.xml');
 
         $storages = $config['storage_drivers'];
 

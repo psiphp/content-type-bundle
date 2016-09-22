@@ -31,3 +31,9 @@ doctrine_phpcr:
 psi_content_type:
     storage_drivers: 
         - doctrine_phpcr_odm
+
+services:
+    example_content_type:
+        class: Psi\Bundle\ContentType\Example\src\ExampleField
+        tags: 
+            - { name: psi_content_type.field, alias: example }
