@@ -2,8 +2,7 @@
 
 namespace Psi\Bundle\ContentType\Tests\Functional;
 
-
-use Symfony\Cmf\Component\ContentType\View\ScalarView;
+use Psi\Component\ContentType\View\ScalarView;
 
 class ViewTest extends BaseTestCase
 {

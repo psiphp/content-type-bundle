@@ -6,23 +6,23 @@
 
     <services>
 
-        <service id="psi_content_type.storage.phpcr.property_encoder" class="Symfony\Cmf\Component\ContentType\Storage\Doctrine\PhpcrOdm\PropertyEncoder">
+        <service id="psi_content_type.storage.phpcr.property_encoder" class="Psi\Component\ContentType\Storage\Doctrine\PhpcrOdm\PropertyEncoder">
             <argument>%psi_content_type.phpcr_namespace_prefix%</argument>
             <argument>%psi_content_type.phpcr_namespace_url%</argument>
         </service>
 
-        <service id="psi_content_type.storage.doctrine.phpcr_odm.field_mapper" class="Symfony\Cmf\Component\ContentType\Storage\Doctrine\PhpcrOdm\FieldMapper">
+        <service id="psi_content_type.storage.doctrine.phpcr_odm.field_mapper" class="Psi\Component\ContentType\Storage\Doctrine\PhpcrOdm\FieldMapper">
             <argument type="service" id="psi_content_type.storage.phpcr.property_encoder" />
         </service>
 
-        <service id="psi_content_type.doctrine.phpcr_odm.field_driver" class="Symfony\Cmf\Component\ContentType\Storage\Doctrine\PhpcrOdm\ContentTypeDriver">
+        <service id="psi_content_type.doctrine.phpcr_odm.field_driver" class="Psi\Component\ContentType\Storage\Doctrine\PhpcrOdm\ContentTypeDriver">
             <argument type="service" id="psi_content_type.registry.field" />
             <argument type="service" id="psi_content_type.registry.mapping" />
             <argument type="service" id="psi_content_type.mapping_resolver" />
             <argument type="service" id="psi_content_type.storage.doctrine.phpcr_odm.field_mapper" />
         </service>
 
-        <service id="psi_content_type.doctrine.phpcr_odm.subscriber.metadata" class="Symfony\Cmf\Component\ContentType\Storage\Doctrine\PhpcrOdm\Subscriber\MetadataSubscriber">
+        <service id="psi_content_type.doctrine.phpcr_odm.subscriber.metadata" class="Psi\Component\ContentType\Storage\Doctrine\PhpcrOdm\Subscriber\MetadataSubscriber">
             <argument type="service" id="psi_content_type.metadata.factory" />
             <argument type="service" id="psi_content_type.registry.field" />
             <argument type="service" id="psi_content_type.mapping_resolver" />
@@ -31,7 +31,7 @@
             <tag name="doctrine_phpcr.event_subscriber" />
         </service>
 
-        <service id="psi_content_type.doctrine.phpcr_odm.subscriber.collection" class="Symfony\Cmf\Component\ContentType\Storage\Doctrine\PhpcrOdm\Subscriber\CollectionSubscriber">
+        <service id="psi_content_type.doctrine.phpcr_odm.subscriber.collection" class="Psi\Component\ContentType\Storage\Doctrine\PhpcrOdm\Subscriber\CollectionSubscriber">
             <argument type="service" id="psi_content_type.metadata.factory" />
             <argument type="service" id="psi_content_type.registry.field" />
             <argument type="service" id="psi_content_type.storage.phpcr.property_encoder" />

@@ -1,5 +1,9 @@
 framework:
     secret: secret
+    form:
+        enabled: true
+    validation:
+        enabled: true
 
 doctrine:
     dbal:

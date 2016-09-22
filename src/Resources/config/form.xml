@@ -6,7 +6,7 @@
 
     <services>
 
-        <service id="psi_content_type.form.extension.field" class="Symfony\Cmf\Component\ContentType\Form\Extension\FieldExtension">
+        <service id="psi_content_type.form.extension.field" class="Psi\Component\ContentType\Form\Extension\FieldExtension">
 
             <argument type="service" id="psi_content_type.metadata.factory" />
             <argument type="service" id="psi_content_type.registry.field" />

@@ -6,7 +6,7 @@
 
     <services>
 
-        <service id="psi_content_type.mapping.string" class="Symfony\Cmf\Component\ContentType\Mapping\StringMapping">
+        <service id="psi_content_type.mapping.string" class="Psi\Component\ContentType\Mapping\StringMapping">
             <tag name="psi_content_type.mapping" alias="string" />
         </service>
 

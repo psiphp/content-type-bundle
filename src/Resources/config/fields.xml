@@ -6,7 +6,7 @@
 
     <services>
 
-        <service id="psi_content_type.field.text" class="Symfony\Cmf\Component\ContentType\Field\TextField">
+        <service id="psi_content_type.field.text" class="Psi\Component\ContentType\Field\TextField">
             <tag name="psi_content_type.field" alias="text" />
         </service>
 

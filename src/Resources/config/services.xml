@@ -6,18 +6,18 @@
 
     <services>
 
-        <service id="psi_content_type.registry.view" class="Symfony\Cmf\Component\ContentType\ViewRegistry" />
-        <service id="psi_content_type.registry.field" class="Symfony\Cmf\Component\ContentType\FieldRegistry" />
+        <service id="psi_content_type.registry.view" class="Psi\Component\ContentType\ViewRegistry" />
+        <service id="psi_content_type.registry.field" class="Psi\Component\ContentType\FieldRegistry" />
 
-        <service id="psi_content_type.registry.mapping" class="Symfony\Cmf\Component\ContentType\MappingRegistry" />
+        <service id="psi_content_type.registry.mapping" class="Psi\Component\ContentType\MappingRegistry" />
 
-        <service id="psi_content_type.view_builder" class="Symfony\Cmf\Component\ContentType\ContentViewBuilder">
+        <service id="psi_content_type.view_builder" class="Psi\Component\ContentType\ContentViewBuilder">
             <argument type="service" id="psi_content_type.metadata.factory"/>
             <argument type="service" id="psi_content_type.registry.field" />
             <argument type="service" id="psi_content_type.registry.view" />
         </service>
 
-        <service id="psi_content_type.mapping_resolver" class="Symfony\Cmf\Component\ContentType\MappingResolver">
+        <service id="psi_content_type.mapping_resolver" class="Psi\Component\ContentType\MappingResolver">
             <argument type="service" id="psi_content_type.registry.mapping" />
         </service>
 

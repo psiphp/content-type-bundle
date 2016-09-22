@@ -2,7 +2,7 @@
 
 namespace Psi\Bundle\ContentType\Tests\Functional;
 
-use Symfony\Cmf\Component\ContentType\Field\TextField;
+use Psi\Component\ContentType\Field\TextField;
 
 class FieldTest extends BaseTestCase
 {

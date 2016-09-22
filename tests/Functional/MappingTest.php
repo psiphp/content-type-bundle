@@ -2,8 +2,7 @@
 
 namespace Psi\Bundle\ContentType\Tests\Functional;
 
-
-use Symfony\Cmf\Component\ContentType\Mapping\StringMapping;
+use Psi\Component\ContentType\Mapping\StringMapping;
 
 class MappingTest extends BaseTestCase
 {

@@ -15,7 +15,7 @@
             </argument>
         </service>
 
-        <service id="psi_content_type.metadata.driver.annotation" class="Symfony\Cmf\Component\ContentType\Metadata\Driver\AnnotationDriver">
+        <service id="psi_content_type.metadata.driver.annotation" class="Psi\Component\ContentType\Metadata\Driver\AnnotationDriver">
             <argument type="service" id="annotation_reader" />
         </service>
     </services>

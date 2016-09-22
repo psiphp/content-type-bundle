@@ -6,7 +6,7 @@
 
     <services>
 
-        <service id="psi_content_type.view.scalar" class="Symfony\Cmf\Component\ContentType\View\ScalarView">
+        <service id="psi_content_type.view.scalar" class="Psi\Component\ContentType\View\ScalarView">
             <tag name="psi_content_type.view" />
         </service>
 
