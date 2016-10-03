@@ -5,25 +5,38 @@ namespace Psi\Bundle\ContentType\DependencyInjection;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 
-/**
- * This is the class that validates and merges configuration from your app/config files.
- *
- * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/configuration.html}
- */
 class Configuration implements ConfigurationInterface
 {
+    private $storageLoaders = [];
+
+    public function __construct(array $storageLoaders)
+    {
+        $this->storageLoaders = $storageLoaders;
+    }
+
     /**
      * {@inheritdoc}
      */
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $treeBuilder->root('psi_content_type')
+        $node = $treeBuilder->root('psi_content_type')
+            ->addDefaultsIfNotSet()
             ->children()
-                ->arrayNode('storage_drivers')
+                ->arrayNode('enabled_storage')
+                    ->info('Enable these storage backends')
                     ->prototype('scalar')->end()
                 ->end()
-            ->end();
+                ->arrayNode('storage')
+                    ->addDefaultsIfNotSet()
+                    ->children();
+
+        foreach ($this->storageLoaders as $key => $storageLoader) {
+            $storageNode = $node->arrayNode($key)
+                ->addDefaultsIfNotSet()
+                ->children();
+            $storageLoader->configure($storageNode);
+        }
 
         return $treeBuilder;
     }
