@@ -14,7 +14,7 @@
             <tag name="psi_content_type.mapping" alias="datetime" />
         </service>
 
-        <service id="psi_content_type.mapping.reference" class="Symfony\Cmf\Component\ContentType\Mapping\ReferenceMapping">
+        <service id="psi_content_type.mapping.reference" class="Psi\Component\ContentType\Mapping\ReferenceMapping">
             <tag name="psi_content_type.mapping" alias="reference" />
         </service>
 

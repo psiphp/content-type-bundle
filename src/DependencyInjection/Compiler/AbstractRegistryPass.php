@@ -33,7 +33,6 @@ abstract class AbstractRegistryPass implements CompilerPassInterface
         $registryDef = $container->getDefinition($this->registryId);
 
         foreach ($taggedIds as $serviceId => $attributes) {
-            var_dump($serviceId);
             $attributes = $attributes[0];
 
             if ($this->registerByAlias) {
