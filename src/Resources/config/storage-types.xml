@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <service id="psi_content_type.mapping.string" class="Psi\Component\ContentType\Storage\Mapping\Type\StringType">
+            <tag name="psi_content_type.storage_type" alias="string" />
+        </service>
+
+        <service id="psi_content_type.mapping.datetime" class="Psi\Component\ContentType\Storage\Mapping\Type\DateTimeType">
+            <tag name="psi_content_type.storage_type" alias="datetime" />
+        </service>
+
+        <service id="psi_content_type.mapping.reference" class="Psi\Component\ContentType\Storage\Mapping\Type\ReferenceType">
+            <tag name="psi_content_type.storage_type" alias="reference" />
+        </service>
+
+        <service id="psi_content_type.mapping.object" class="Psi\Component\ContentType\Storage\Mapping\Type\ObjectType">
+            <tag name="psi_content_type.storage_type" alias="object" />
+        </service>
+
+    </services>
+
+</container>

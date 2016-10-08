@@ -2,32 +2,29 @@
 
 namespace Psi\Bundle\ContentType\Command;
 
-use Psi\Component\ContentType\FieldInterface;
+use Psi\Component\ContentType\FieldLoader;
 use Psi\Component\ContentType\FieldRegistry;
-use Psi\Component\ContentType\Mapping\CompoundMapping;
-use Psi\Component\ContentType\MappingBuilder;
-use Psi\Component\ContentType\MappingBuilderCompound;
-use Psi\Component\ContentType\MappingInterface;
-use Psi\Component\ContentType\MappingRegistry;
+use Psi\Component\ContentType\LoadedField;
 use Psi\Component\ContentType\OptionsResolver\FieldOptionsResolver;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\Table;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\OptionsResolver\Options;
 
 class DebugCommand extends Command
 {
     private $fieldRegistry;
-    private $mappingRegistry;
+    private $fieldLoader;
 
     public function __construct(
         FieldRegistry $registry,
-        MappingRegistry $mappingRegistry
+        FieldLoader $fieldLoader
     ) {
         parent::__construct();
         $this->fieldRegistry = $registry;
-        $this->mappingRegistry = $mappingRegistry;
+        $this->fieldLoader = $fieldLoader;
     }
 
     /**
@@ -61,7 +58,7 @@ EOT
             return $this->listFields($output);
         }
 
-        $field = $this->fieldRegistry->get($key);
+        $field = $this->fieldLoader->loadByTypeAndOptions($key, []);
 
         return $this->showField($output, $key, $field);
     }
@@ -82,66 +79,25 @@ EOT
         $output->writeln('// Specify a field for more information');
     }
 
-    private function showField(OutputInterface $output, $key, FieldInterface $field)
+    private function showField(OutputInterface $output, $key, LoadedField $field)
     {
         $output->writeln('<info>Field: </info>' . $key);
         $output->write(PHP_EOL);
-        $output->writeln('<comment>// View</comment>');
-        $output->writeln($field->getViewType());
-        $output->write(PHP_EOL);
+        $output->write('<comment>View: </comment>');
+        $output->writeln($field->getInnerField()->getViewType());
 
-        $output->writeln('<comment>// Form</comment>');
-        $output->writeln($field->getFormType());
-        $output->write(PHP_EOL);
+        $output->write('<comment>Form: </comment>');
+        $output->writeln($field->getInnerField()->getFormType());
+        $output->write('<comment>Storage type: </comment>');
+        $output->writeln(get_class($field->getStorageType()));
 
-        $output->writeln('<comment>// Mapping</comment>');
-        $mapping = new MappingBuilder($this->mappingRegistry);
-        $mapping = $field->getMapping($mapping);
-
-        if ($mapping instanceof MappingBuilderCompound) {
-            $mapping = $mapping->getCompound();
-        }
-
-        $this->showMapping($output, $mapping);
-        $output->write(PHP_EOL);
-
-        $output->writeln('<comment>// Default options</comment>');
+        $output->write('<comment>Defined options: </comment>');
         $options = new FieldOptionsResolver();
-        $field->configureOptions($options);
-        $options = $options->resolve([]);
-        $this->showOptions($output, $options);
-    }
+        $field->getInnerField()->configureOptions($options);
+        $options->getDefinedOptions()
+            ? $output->write(implode(', ', $options->getDefinedOptions()))
+            : $output->write('No defined options');
 
-    private function showMapping(OutputInterface $output, MappingInterface $mapping)
-    {
-        if (false === $mapping instanceof CompoundMapping) {
-            $output->writeln(get_class($mapping));
-
-            return;
-        }
-
-        $table = new Table($output);
-        foreach ($mapping as $key => $child) {
-            $table->addRow([$key, get_class($child)]);
-        }
-
-        $table->render();
-    }
-
-    private function showOptions(OutputInterface $output, array $options)
-    {
-        if (empty($options)) {
-            $output->writeln('No default options');
-
-            return;
-        }
-
-        $table = new Table($output);
-
-        foreach ($options as $key => $value) {
-            $table->addRow([$key, $value]);
-        }
-
-        $table->render();
+        $output->write(PHP_EOL);
     }
 }

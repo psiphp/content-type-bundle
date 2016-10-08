@@ -28,7 +28,7 @@ class PsiContentTypeExtension extends Extension
         $loader->load('form.xml');
         $loader->load('services.xml');
         $loader->load('fields.xml');
-        $loader->load('mappings.xml');
+        $loader->load('storage-types.xml');
         $loader->load('views.xml');
         $loader->load('console.xml');
 

@@ -19,7 +19,7 @@ class DebugCommandTest extends BaseTestCase
         $output = $this->runCommand([
             'field' => 'text',
         ]);
-        $this->assertContains('No default options', $output->fetch());
+        $this->assertContains('No defined options', $output->fetch());
     }
 
     public function testCommandCompound()
@@ -28,8 +28,8 @@ class DebugCommandTest extends BaseTestCase
             'field' => 'example',
         ]);
         $display = $output->fetch();
-        $this->assertContains('foobar', $display);
-        $this->assertContains('barfoo', $display);
+        $this->assertContains('barbar', $display);
+        $this->assertContains('darf', $display);
     }
 
     private function runCommand(array $input = [])

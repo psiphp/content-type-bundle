@@ -9,7 +9,7 @@ See the `Psi Content Type`_ component documentation for general reference.
 Extending
 ---------
 
-The bundle allows you to easily register new fields, views and mappings with
+The bundle allows you to easily register new fields, views and storage_types with
 tagged services.
 
 Fields
@@ -41,14 +41,14 @@ Add a new image view:
 Mapping
 ~~~~~~~
 
-**Tag**: `psi_content_type.mapping`
+**Tag**: `psi_content_type.storage_type`
 
-Add a new storage mapping type: 
+Add a new storage storage_type type: 
 
 .. code-block:: xml
 
-    <service id="acme.mapping.blob" class="Acme\ContentType\Mapping\BlobMapping">
-        <tag name="psi_content_type.mapping" alias="blob" />
+    <service id="acme.storage_type.blob" class="Acme\ContentType\Mapping\BlobMapping">
+        <tag name="psi_content_type.storage_type" alias="blob" />
     </service>
 
 .. _Psi Content Type: https://psiphp.readthedocs.io/en/latest/components/content-type/docs/index.html

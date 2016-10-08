@@ -4,7 +4,7 @@ namespace Psi\Bundle\ContentType;
 
 use Psi\Bundle\ContentType\DependencyInjection\Compiler\FieldPass;
 use Psi\Bundle\ContentType\DependencyInjection\Compiler\FormExtensionPass;
-use Psi\Bundle\ContentType\DependencyInjection\Compiler\MappingPass;
+use Psi\Bundle\ContentType\DependencyInjection\Compiler\StorageTypePass;
 use Psi\Bundle\ContentType\DependencyInjection\Compiler\ViewPass;
 use Psi\Bundle\ContentType\DependencyInjection\Storage\PhpcrOdmLoader;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -19,7 +19,7 @@ class PsiContentTypeBundle extends Bundle
 
         $container->addCompilerPass(new FieldPass());
         $container->addCompilerPass(new ViewPass());
-        $container->addCompilerPass(new MappingPass());
+        $container->addCompilerPass(new StorageTypePass());
         $container->addCompilerPass(new FormExtensionPass());
     }
 }

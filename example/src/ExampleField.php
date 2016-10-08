@@ -3,17 +3,18 @@
 namespace Psi\Bundle\ContentType\Example\src;
 
 use Psi\Component\ContentType\FieldInterface;
-use Psi\Component\ContentType\MappingBuilder;
+use Psi\Component\ContentType\OptionsResolver\FieldOptionsResolver;
+use Psi\Component\ContentType\Storage\Mapping\ConfiguredType;
+use Psi\Component\ContentType\Storage\Mapping\TypeFactory;
 use Psi\Component\ContentType\View\ScalarView;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class ExampleField implements FieldInterface
 {
     /**
      * {@inheritdoc}
      */
-    public function getViewType()
+    public function getViewType(): string
     {
         return ScalarView::class;
     }
@@ -21,7 +22,7 @@ class ExampleField implements FieldInterface
     /**
      * {@inheritdoc}
      */
-    public function getFormType()
+    public function getFormType(): string
     {
         return TextType::class;
     }
@@ -29,22 +30,22 @@ class ExampleField implements FieldInterface
     /**
      * {@inheritdoc}
      */
-    public function getMapping(MappingBuilder $builder)
+    public function getStorageType(TypeFactory $factory): ConfiguredType
     {
-        return $builder->compound(Image::class)
-            ->map('image', 'string')
-            ->map('mimeType', 'string')
-            ->map('originalFilename', 'string');
+        return $factory->create('object', [
+            'class' => Image::class,
+        ]);
     }
 
     /**
      * {@inheritdoc}
      */
-    public function configureOptions(OptionsResolver $options)
+    public function configureOptions(FieldOptionsResolver $options)
     {
         $options->setDefaults([
             'foobar' => 'barfoo',
             'barbar' => 'booboo',
         ]);
+        $options->setRequired('darf');
     }
 }
