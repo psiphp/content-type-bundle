@@ -2,13 +2,13 @@
 
 namespace Psi\Bundle\ContentType\DependencyInjection\Compiler;
 
-class MappingPass extends AbstractRegistryPass
+class StorageTypePass extends AbstractRegistryPass
 {
     public function __construct()
     {
         parent::__construct(
-            'psi_content_type.registry.mapping',
-            'psi_content_type.mapping'
+            'psi_content_type.registry.storage_type',
+            'psi_content_type.storage_type'
         );
     }
 }
