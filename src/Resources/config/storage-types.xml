@@ -22,6 +22,10 @@
             <tag name="psi_content_type.storage_type" alias="object" />
         </service>
 
+        <service id="psi_content_type.mapping.collection" class="Psi\Component\ContentType\Storage\Mapping\Type\CollectionType">
+            <tag name="psi_content_type.storage_type" alias="collection" />
+        </service>
+
     </services>
 
 </container>

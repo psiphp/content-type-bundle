@@ -3,7 +3,6 @@
 namespace Psi\Bundle\ContentType\DependencyInjection\Storage;
 
 use Psi\Bundle\ContentType\DependencyInjection\LoaderInterface;
-use Psi\Bundle\ContentType\DependencyInjection\Storage\Compiler\DoctrinePhpcrOdmDriverPass;
 use Symfony\Component\Config\Definition\Builder\NodeBuilder;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -16,7 +15,6 @@ class PhpcrOdmLoader implements LoaderInterface
     public function __construct(ContainerBuilder $container)
     {
         $this->container = $container;
-        $container->addCompilerPass(new DoctrinePhpcrOdmDriverPass());
     }
 
     /**

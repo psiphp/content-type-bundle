@@ -31,6 +31,11 @@
             <tag name="doctrine_phpcr.event_subscriber" />
         </service>
 
+        <service id="psi_content_type.doctrine.phpcr_odm.collection_updater" class="Psi\Component\ContentType\Storage\Doctrine\PhpcrOdm\CollectionIdentifierUpdater">
+            <argument type="service" id="psi_content_type.metadata.factory" />
+            <argument type="service" id="psi_content_type.storage.phpcr.property_encoder" />
+        </service>
+
     </services>
 
 </container>
