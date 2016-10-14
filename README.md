@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/psiphp/content-type-bundle.svg?branch=master)](https://travis-ci.org/psiphp/content-type-bundle)
 [![StyleCI](https://styleci.io/repos/63088910/shield)](https://styleci.io/repos/63088910)
+[![Scrutinizer Code
+Quality](https://scrutinizer-ci.com/g/psiphp/content-type/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/psiphp/content-type-bundle/?branch=master)
 [![Latest Stable Version](https://poser.pugx.org/psiphp/content-type-bundle/version.png)](https://packagist.org/packages/psiphp/content-type-bundle)
 [![Total Downloads](https://poser.pugx.org/psiphp/content-type/d/total.png)](https://packagist.org/packages/psiphp/content-type-bundle)
 
@@ -24,4 +26,4 @@ $ composer require 'psiphp/content-type-bundle'
 
 ## Contributing
 
-Just go ahead and create a PR, you know you need to..
+All contributions are welcome, go ahead and make a PR!
