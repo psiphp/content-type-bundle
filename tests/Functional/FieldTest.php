@@ -2,7 +2,7 @@
 
 namespace Psi\Bundle\ContentType\Tests\Functional;
 
-use Psi\Component\ContentType\Field\TextField;
+use Psi\Component\ContentType\Standard\Field\TextField;
 
 class FieldTest extends BaseTestCase
 {

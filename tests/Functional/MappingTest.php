@@ -2,7 +2,7 @@
 
 namespace Psi\Bundle\ContentType\Tests\Functional;
 
-use Psi\Component\ContentType\Storage\Mapping\Type\StringType;
+use Psi\Component\ContentType\Standard\Storage\StringType;
 
 class MappingTest extends BaseTestCase
 {

@@ -6,13 +6,13 @@
 
     <services>
 
-        <service id="psi_content_type.registry.view" class="Psi\Component\ContentType\ViewRegistry" />
+        <service id="psi_content_type.registry.view" class="Psi\Component\ContentType\View\ViewRegistry" />
         <service id="psi_content_type.registry.field" class="Psi\Component\ContentType\FieldRegistry" />
-        <service id="psi_content_type.registry.storage_type" class="Psi\Component\ContentType\Storage\Mapping\TypeRegistry" />
+        <service id="psi_content_type.registry.storage_type" class="Psi\Component\ContentType\Storage\TypeRegistry" />
 
-        <service id="psi_content_type.view_builder" class="Psi\Component\ContentType\ContentViewBuilder">
+        <service id="psi_content_type.view_builder" class="Psi\Component\ContentType\View\ViewBuilder">
             <argument type="service" id="psi_content_type.metadata.factory"/>
-            <argument type="service" id="psi_content_type.registry.field" />
+            <argument type="service" id="psi_content_type.field_loader" />
             <argument type="service" id="psi_content_type.registry.view" />
         </service>
 
@@ -21,7 +21,7 @@
             <argument type="service" id="psi_content_type.registry.field" />
         </service>
 
-        <service id="psi_content_type.storage.type_factory" class="Psi\Component\ContentType\Storage\Mapping\TypeFactory">
+        <service id="psi_content_type.storage.type_factory" class="Psi\Component\ContentType\Storage\TypeFactory">
             <argument type="service" id="psi_content_type.registry.storage_type" />
         </service>
 

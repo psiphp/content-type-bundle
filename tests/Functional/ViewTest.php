@@ -2,7 +2,7 @@
 
 namespace Psi\Bundle\ContentType\Tests\Functional;
 
-use Psi\Component\ContentType\View\ScalarView;
+use Psi\Component\ContentType\Standard\View\ScalarView;
 
 class ViewTest extends BaseTestCase
 {
