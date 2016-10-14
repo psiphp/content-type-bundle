@@ -6,15 +6,15 @@
 
     <services>
 
-        <service id="psi_content_type.field.text" class="Psi\Component\ContentType\Field\TextField">
+        <service id="psi_content_type.field.text" class="Psi\Component\ContentType\Standard\Field\TextField">
             <tag name="psi_content_type.field" alias="text" />
         </service>
 
-        <service id="psi_content_type.field.datetime" class="Psi\Component\ContentType\Field\DateTimeField">
+        <service id="psi_content_type.field.datetime" class="Psi\Component\ContentType\Standard\Field\DateTimeField">
             <tag name="psi_content_type.field" alias="datetime" />
         </service>
 
-        <service id="psi_content_type.field.collection" class="Psi\Component\ContentType\Field\CollectionField">
+        <service id="psi_content_type.field.collection" class="Psi\Component\ContentType\Standard\Field\CollectionField">
             <argument type="service" id="psi_content_type.registry.field" />
             <tag name="psi_content_type.field" alias="collection" />
         </service>

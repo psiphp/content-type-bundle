@@ -58,7 +58,7 @@ EOT
             return $this->listFields($output);
         }
 
-        $field = $this->fieldLoader->loadByTypeAndOptions($key, []);
+        $field = $this->fieldLoader->load($key, []);
 
         return $this->showField($output, $key, $field);
     }
