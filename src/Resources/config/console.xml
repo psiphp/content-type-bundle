@@ -7,7 +7,7 @@
     <services>
 
         <service id="psi_content_type.console.command.debug" class="Psi\Bundle\ContentType\Command\DebugCommand">
-            <argument type="service" id="psi_content_type.registry.field" />
+            <argument type="service" id="psi_content_type.field_registry" />
             <argument type="service" id="psi_content_type.field_loader" />
             <tag name="console.command" />
         </service>

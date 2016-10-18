@@ -8,7 +8,7 @@ class MappingTest extends BaseTestCase
 {
     public function testScalarMapping()
     {
-        $registry = $this->getContainer()->get('psi_content_type.registry.storage_type');
+        $registry = $this->getContainer()->get('psi_content_type.storage.type_registry');
         $type = $registry->get('string');
         $this->assertInstanceOf(StringType::class, $type);
     }

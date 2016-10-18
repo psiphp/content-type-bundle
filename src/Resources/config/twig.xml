@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <service id="psi_content_type.twig.extension" class="Psi\Bridge\ContentType\Twig\ContentTypeExtension">
+            <argument type="service" id="psi_content_type.view.renderer.twig" />
+            <tag name="twig.extension" />
+        </service>
+
+        <service id="psi_content_type.view.renderer.twig" class="Psi\Bridge\ContentType\Twig\TwigRenderer">
+            <argument type="service" id="twig" />
+        </service>
+
+    </services>
+
+</container>
+

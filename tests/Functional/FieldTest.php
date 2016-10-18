@@ -8,7 +8,7 @@ class FieldTest extends BaseTestCase
 {
     public function testTextField()
     {
-        $registry = $this->getContainer()->get('psi_content_type.registry.field');
+        $registry = $this->getContainer()->get('psi_content_type.field_registry');
         $textField = $registry->get('text');
         $this->assertInstanceOf(TextField::class, $textField);
     }

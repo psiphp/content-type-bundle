@@ -6,10 +6,24 @@
 
     <services>
 
-        <service id="psi_content_type.view.scalar" class="Psi\Component\ContentType\Standard\View\ScalarView">
-            <tag name="psi_content_type.view" />
+        <service id="psi_content_type.view.scalar" class="Psi\Component\ContentType\Standard\View\ScalarType">
+            <tag name="psi_content_type.view.type" />
         </service>
 
+        <service id="psi_content_type.view.null" class="Psi\Component\ContentType\Standard\View\NullType">
+            <tag name="psi_content_type.view.type" />
+        </service>
+
+        <service id="psi_content_type.view.object" class="Psi\Component\ContentType\Standard\View\ObjectType">
+            <argument type="service" id="psi_content_type.metadata.factory" />
+            <argument type="service" id="psi_content_type.field_loader" />
+            <tag name="psi_content_type.view.type" />
+        </service>
+
+        <service id="psi_content_type.view.collection" class="Psi\Component\ContentType\Standard\View\CollectionType">
+            <argument type="service" id="psi_content_type.field_loader" />
+            <tag name="psi_content_type.view.type" />
+        </service>
     </services>
 
 </container>

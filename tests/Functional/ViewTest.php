@@ -2,14 +2,14 @@
 
 namespace Psi\Bundle\ContentType\Tests\Functional;
 
-use Psi\Component\ContentType\Standard\View\ScalarView;
+use Psi\Component\ContentType\Standard\View\ScalarType;
 
 class ViewTest extends BaseTestCase
 {
     public function testScalarView()
     {
-        $registry = $this->getContainer()->get('psi_content_type.registry.view');
-        $view = $registry->get(ScalarView::class);
-        $this->assertInstanceOf(ScalarView::class, $view);
+        $registry = $this->getContainer()->get('psi_content_type.view.type_registry');
+        $view = $registry->get(ScalarType::class);
+        $this->assertInstanceOf(ScalarType::class, $view);
     }
 }
