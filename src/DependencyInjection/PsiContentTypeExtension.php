@@ -31,6 +31,7 @@ class PsiContentTypeExtension extends Extension
         $loader->load('storage-types.xml');
         $loader->load('views.xml');
         $loader->load('console.xml');
+        $loader->load('twig.xml');
 
         $storages = $config['enabled_storage'];
 

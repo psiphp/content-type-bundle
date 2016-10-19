@@ -10,7 +10,10 @@ class ServiceTest extends BaseTestCase
 
         foreach ($container->getServiceIds() as $serviceId) {
             if (0 === strpos($serviceId, 'psi_content_type')) {
-                $container->get($serviceId);
+                $service = $container->get($serviceId);
+
+                // for the sake of incrementing the assertion count...
+                $this->assertNotNull($service);
             }
         }
     }

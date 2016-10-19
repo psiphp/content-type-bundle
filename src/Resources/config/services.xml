@@ -6,23 +6,22 @@
 
     <services>
 
-        <service id="psi_content_type.registry.view" class="Psi\Component\ContentType\View\ViewRegistry" />
-        <service id="psi_content_type.registry.field" class="Psi\Component\ContentType\FieldRegistry" />
-        <service id="psi_content_type.registry.storage_type" class="Psi\Component\ContentType\Storage\TypeRegistry" />
+        <service id="psi_content_type.view.type_registry" class="Psi\Component\ContentType\View\TypeRegistry" />
+        <service id="psi_content_type.field_registry" class="Psi\Component\ContentType\FieldRegistry" />
+        <service id="psi_content_type.storage.type_registry" class="Psi\Component\ContentType\Storage\TypeRegistry" />
 
-        <service id="psi_content_type.view_builder" class="Psi\Component\ContentType\View\ViewBuilder">
-            <argument type="service" id="psi_content_type.metadata.factory"/>
+        <service id="psi_content_type.view.factory" class="Psi\Component\ContentType\View\ViewFactory">
+            <argument type="service" id="psi_content_type.view.type_registry" />
             <argument type="service" id="psi_content_type.field_loader" />
-            <argument type="service" id="psi_content_type.registry.view" />
         </service>
 
         <service id="psi_content_type.field_loader" class="Psi\Component\ContentType\FieldLoader">
             <argument type="service" id="psi_content_type.storage.type_factory" />
-            <argument type="service" id="psi_content_type.registry.field" />
+            <argument type="service" id="psi_content_type.field_registry" />
         </service>
 
         <service id="psi_content_type.storage.type_factory" class="Psi\Component\ContentType\Storage\TypeFactory">
-            <argument type="service" id="psi_content_type.registry.storage_type" />
+            <argument type="service" id="psi_content_type.storage.type_registry" />
         </service>
 
     </services>

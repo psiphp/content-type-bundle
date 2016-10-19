@@ -15,7 +15,7 @@
         </service>
 
         <service id="psi_content_type.field.collection" class="Psi\Component\ContentType\Standard\Field\CollectionField">
-            <argument type="service" id="psi_content_type.registry.field" />
+            <argument type="service" id="psi_content_type.field_registry" />
             <tag name="psi_content_type.field" alias="collection" />
         </service>
 
