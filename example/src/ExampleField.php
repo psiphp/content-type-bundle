@@ -4,8 +4,7 @@ namespace Psi\Bundle\ContentType\Example\src;
 
 use Psi\Component\ContentType\FieldInterface;
 use Psi\Component\ContentType\OptionsResolver\FieldOptionsResolver;
-use Psi\Component\ContentType\Storage\ConfiguredType;
-use Psi\Component\ContentType\Storage\TypeFactory;
+use Psi\Component\ContentType\Standard\Storage\StringType;
 use Psi\Component\ContentType\View\ScalarView;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 
@@ -30,11 +29,9 @@ class ExampleField implements FieldInterface
     /**
      * {@inheritdoc}
      */
-    public function getStorageType(TypeFactory $factory): ConfiguredType
+    public function getStorageType(): string
     {
-        return $factory->create('object', [
-            'class' => Image::class,
-        ]);
+        return StringType::class;
     }
 
     /**
