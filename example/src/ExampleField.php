@@ -8,6 +8,7 @@ use Psi\Component\ContentType\Storage\ConfiguredType;
 use Psi\Component\ContentType\Storage\TypeFactory;
 use Psi\Component\ContentType\View\ScalarView;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Psi\Component\ContentType\Standard\Storage\StringType;
 
 class ExampleField implements FieldInterface
 {
@@ -30,11 +31,9 @@ class ExampleField implements FieldInterface
     /**
      * {@inheritdoc}
      */
-    public function getStorageType(TypeFactory $factory): ConfiguredType
+    public function getStorageType(): string
     {
-        return $factory->create('object', [
-            'class' => Image::class,
-        ]);
+        return StringType::class;
     }
 
     /**

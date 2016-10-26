@@ -4,7 +4,6 @@ namespace Psi\Bundle\ContentType\Command;
 
 use Psi\Component\ContentType\FieldLoader;
 use Psi\Component\ContentType\FieldRegistry;
-use Psi\Component\ContentType\LoadedField;
 use Psi\Component\ContentType\OptionsResolver\FieldOptionsResolver;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\Table;
@@ -12,6 +11,7 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\OptionsResolver\Options;
+use Psi\Component\ContentType\Field;
 
 class DebugCommand extends Command
 {
@@ -79,17 +79,17 @@ EOT
         $output->writeln('// Specify a field for more information');
     }
 
-    private function showField(OutputInterface $output, $key, LoadedField $field)
+    private function showField(OutputInterface $output, $key, Field $field)
     {
         $output->writeln('<info>Field: </info>' . $key);
         $output->write(PHP_EOL);
         $output->write('<comment>View: </comment>');
-        $output->writeln($field->getInnerField()->getViewType());
+        $output->writeln($field->getViewType());
 
         $output->write('<comment>Form: </comment>');
-        $output->writeln($field->getInnerField()->getFormType());
+        $output->writeln($field->getFormType());
         $output->write('<comment>Storage type: </comment>');
-        $output->writeln(get_class($field->getStorageType()));
+        $output->writeln($field->getStorageType());
 
         $output->write('<comment>Defined options: </comment>');
         $options = new FieldOptionsResolver();

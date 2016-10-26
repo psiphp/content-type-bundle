@@ -19,7 +19,7 @@ class DebugCommandTest extends BaseTestCase
         $output = $this->runCommand([
             'field' => 'text',
         ]);
-        $this->assertContains('No defined options', $output->fetch());
+        $this->assertContains('tag', $output->fetch());
     }
 
     public function testCommandCompound()
