@@ -4,16 +4,13 @@ namespace Psi\Bundle\ContentType\Command;
 
 use Psi\Component\ContentType\Field;
 use Psi\Component\ContentType\FieldLoader;
+use Psi\Component\ContentType\FieldOptions;
 use Psi\Component\ContentType\FieldRegistry;
-use Psi\Component\ContentType\OptionsResolver\FieldOptionsResolver;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\Table;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\OptionsResolver\Options;
-use Psi\Component\ContentType\FieldOptions;
-use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class DebugCommand extends Command
 {
