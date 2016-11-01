@@ -19,7 +19,7 @@ class DebugCommandTest extends BaseTestCase
         $output = $this->runCommand([
             'field' => 'text',
         ]);
-        $this->assertContains('tag', $output->fetch());
+        $this->assertContains('ScalarType', $output->fetch());
     }
 
     public function testCommandCompound()
@@ -28,8 +28,8 @@ class DebugCommandTest extends BaseTestCase
             'field' => 'example',
         ]);
         $display = $output->fetch();
-        $this->assertContains('barbar', $display);
-        $this->assertContains('darf', $display);
+        $this->assertContains('ScalarView', $display);
+        $this->assertContains('StringType', $display);
     }
 
     private function runCommand(array $input = [])

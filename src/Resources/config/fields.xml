@@ -5,9 +5,76 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-
         <service id="psi_content_type.field.text" class="Psi\Component\ContentType\Standard\Field\TextField">
             <tag name="psi_content_type.field" alias="text" />
+        </service>
+
+        <service id="psi_content_type.field.birthday" class="Psi\Component\ContentType\Standard\Field\BirthdayField">
+            <tag name="psi_content_type.field" alias="birthday" />
+        </service>
+
+        <service id="psi_content_type.field.checkbox" class="Psi\Component\ContentType\Standard\Field\CheckboxField">
+            <tag name="psi_content_type.field" alias="checkbox" />
+        </service>
+
+        <service id="psi_content_type.field.choice" class="Psi\Component\ContentType\Standard\Field\ChoiceField">
+            <tag name="psi_content_type.field" alias="choice" />
+        </service>
+
+        <service id="psi_content_type.field.currency" class="Psi\Component\ContentType\Standard\Field\CurrencyField">
+            <tag name="psi_content_type.field" alias="currency" />
+        </service>
+
+        <service id="psi_content_type.field.date" class="Psi\Component\ContentType\Standard\Field\DateField">
+            <tag name="psi_content_type.field" alias="date" />
+        </service>
+
+        <service id="psi_content_type.field.email" class="Psi\Component\ContentType\Standard\Field\EmailField">
+            <tag name="psi_content_type.field" alias="email" />
+        </service>
+
+        <service id="psi_content_type.field.integer" class="Psi\Component\ContentType\Standard\Field\IntegerField">
+            <tag name="psi_content_type.field" alias="integer" />
+        </service>
+
+        <service id="psi_content_type.field.language" class="Psi\Component\ContentType\Standard\Field\LanguageField">
+            <tag name="psi_content_type.field" alias="language" />
+        </service>
+
+        <service id="psi_content_type.field.locale" class="Psi\Component\ContentType\Standard\Field\TextField">
+            <tag name="psi_content_type.field" alias="locale" />
+        </service>
+
+        <service id="psi_content_type.field.money" class="Psi\Component\ContentType\Standard\Field\MoneyField">
+            <tag name="psi_content_type.field" alias="money" />
+        </service>
+
+        <service id="psi_content_type.field.number" class="Psi\Component\ContentType\Standard\Field\NumberField">
+            <tag name="psi_content_type.field" alias="number" />
+        </service>
+
+        <service id="psi_content_type.field.percent" class="Psi\Component\ContentType\Standard\Field\PercentField">
+            <tag name="psi_content_type.field" alias="percent" />
+        </service>
+
+        <service id="psi_content_type.field.range" class="Psi\Component\ContentType\Standard\Field\RangeField">
+            <tag name="psi_content_type.field" alias="range" />
+        </service>
+
+        <service id="psi_content_type.field.textarea" class="Psi\Component\ContentType\Standard\Field\TextareaField">
+            <tag name="psi_content_type.field" alias="textarea" />
+        </service>
+
+        <service id="psi_content_type.field.time" class="Psi\Component\ContentType\Standard\Field\TimeField">
+            <tag name="psi_content_type.field" alias="time" />
+        </service>
+
+        <service id="psi_content_type.field.timezone" class="Psi\Component\ContentType\Standard\Field\TimezoneField">
+            <tag name="psi_content_type.field" alias="timezone" />
+        </service>
+
+        <service id="psi_content_type.field.url" class="Psi\Component\ContentType\Standard\Field\UrlField">
+            <tag name="psi_content_type.field" alias="url" />
         </service>
 
         <service id="psi_content_type.field.datetime" class="Psi\Component\ContentType\Standard\Field\DateTimeField">

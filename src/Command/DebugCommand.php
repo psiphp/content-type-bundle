@@ -12,6 +12,8 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\OptionsResolver\Options;
+use Psi\Component\ContentType\FieldOptions;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class DebugCommand extends Command
 {
@@ -58,7 +60,7 @@ EOT
             return $this->listFields($output);
         }
 
-        $field = $this->fieldLoader->load($key, []);
+        $field = $this->fieldLoader->load($key, FieldOptions::create([]));
 
         return $this->showField($output, $key, $field);
     }
@@ -85,19 +87,9 @@ EOT
         $output->write(PHP_EOL);
         $output->write('<comment>View: </comment>');
         $output->writeln($field->getViewType());
-
         $output->write('<comment>Form: </comment>');
         $output->writeln($field->getFormType());
         $output->write('<comment>Storage type: </comment>');
         $output->writeln($field->getStorageType());
-
-        $output->write('<comment>Defined options: </comment>');
-        $options = new FieldOptionsResolver();
-        $field->getInnerField()->configureOptions($options);
-        $options->getDefinedOptions()
-            ? $output->write(implode(', ', $options->getDefinedOptions()))
-            : $output->write('No defined options');
-
-        $output->write(PHP_EOL);
     }
 }
