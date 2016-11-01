@@ -14,6 +14,18 @@
             <tag name="psi_content_type.view.type" />
         </service>
 
+        <service id="psi_content_type.view.datetime" class="Psi\Component\ContentType\Standard\View\DateTimeType">
+            <tag name="psi_content_type.view.type" />
+        </service>
+
+        <service id="psi_content_type.view.boolean" class="Psi\Component\ContentType\Standard\View\BooleanType">
+            <tag name="psi_content_type.view.type" />
+        </service>
+
+        <service id="psi_content_type.view.url" class="Psi\Component\ContentType\Standard\View\UrlType">
+            <tag name="psi_content_type.view.type" />
+        </service>
+
         <service id="psi_content_type.view.object" class="Psi\Component\ContentType\Standard\View\ObjectType">
             <argument type="service" id="psi_content_type.metadata.factory" />
             <argument type="service" id="psi_content_type.field_loader" />

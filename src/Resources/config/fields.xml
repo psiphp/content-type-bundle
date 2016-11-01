@@ -25,6 +25,10 @@
             <tag name="psi_content_type.field" alias="currency" />
         </service>
 
+        <service id="psi_content_type.field.country" class="Psi\Component\ContentType\Standard\Field\CountryField">
+            <tag name="psi_content_type.field" alias="country" />
+        </service>
+
         <service id="psi_content_type.field.date" class="Psi\Component\ContentType\Standard\Field\DateField">
             <tag name="psi_content_type.field" alias="date" />
         </service>
