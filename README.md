@@ -13,9 +13,10 @@ This component is part of the Psi Content Management Framework
 
 Symfony Bundle for integrating the Psi [ContentType](https://github.com/psiphp/content-type) component.
 
+
 ## Documentation
 
-See the documentation in [doc/index.rst](https://github.com/psiphp/content-type-bundle/blob/master/docs/index.rst).
+Documentation is in progress, there may be documentation in [doc/index.rst](https://github.com/psiphp/content-type-bundle/blob/master/docs/index.rst).
 
 ## Installation
 
