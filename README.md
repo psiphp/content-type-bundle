@@ -15,8 +15,7 @@ Symfony Bundle for integrating the Psi [ContentType](https://github.com/psiphp/c
 
 ## Documentation
 
-You can find out more about this component and others
-[here](https://psiphp.readthedocs.io/en/latest/components/content-type-bundle/docs/index.html).
+See the documentation in [doc/index.rst](https://github.com/psiphp/content-type-bundle/blob/master/docs/index.rst).
 
 ## Installation
 
